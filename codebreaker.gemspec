@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'rake'
+  spec.add_dependency 'terminal-table', '~> 1.6'
   spec.add_development_dependency 'fasterer'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'

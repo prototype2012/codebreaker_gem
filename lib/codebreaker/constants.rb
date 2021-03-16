@@ -1,5 +1,7 @@
 module Codebreaker
   module Constants
+    SCORE_FILE_PATH = File.expand_path('./score.yml').freeze
+
     MIN_CODE_DIGIT = 1
     MAX_CODE_DIGIT = 6
     DIGITS_NUMBER = 4

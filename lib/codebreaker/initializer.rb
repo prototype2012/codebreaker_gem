@@ -3,6 +3,10 @@ require 'codebreaker'
 
 require_relative './constants'
 
+require 'terminal-table'
+require_relative './score/game_result'
+require_relative './score/score_manager'
+
 require_relative './exceptions/negative_number_error'
 require_relative './exceptions/out_of_comparison_range_error'
 require_relative './exceptions/empty_array_error'
