@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    codebreaker (0.7.0)
+    codebreaker (0.8.0)
       rake
       terminal-table (~> 1.6)
 
