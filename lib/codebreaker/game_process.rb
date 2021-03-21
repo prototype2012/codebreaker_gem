@@ -18,6 +18,7 @@ module Codebreaker
       @attempts_left = attempts_info[:attempts_left] || default_settings.fetch(:attempts)
       @hints = init_hints(attempts_info[:hints])
       @guess_code = rest_params[:guess_code] || []
+      @hints_shown = rest_params[:hints_shown] || []
     end
 
     def win?
@@ -37,7 +38,9 @@ module Codebreaker
     end
 
     def hint
-      @hints.pop || raise(Exceptions::NoMoreHintsError)
+      hint = @hints.pop || raise(Exceptions::NoMoreHintsError)
+      @hints_shown.push(hint)
+      hint
     end
 
     def guess(guess_digits_array)
