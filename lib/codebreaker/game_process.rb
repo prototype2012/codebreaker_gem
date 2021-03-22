@@ -47,10 +47,8 @@ module Codebreaker
       raise Exceptions::NoMoreAttemptsError unless @attempts_left.positive?
 
       @guess_code = guess_digits_array
-
       @attempts_left -= 1
-
-      compare(@secret_code, @guess_code)
+      @last_comparison = compare(@secret_code, @guess_code)
     end
 
     def to_h
