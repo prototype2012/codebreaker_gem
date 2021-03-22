@@ -18,4 +18,4 @@ RSpec/ExampleLength:
   Exclude:
     - 'spec/**/*.rb'
 Metrics/MethodLength:
-  IgnoredMethods: ['to_h']
+  IgnoredMethods: ['to_h','initialize']

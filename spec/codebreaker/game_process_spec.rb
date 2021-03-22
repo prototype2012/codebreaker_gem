@@ -71,8 +71,10 @@ RSpec.describe Codebreaker::GameProcess do
                                                      attempts_info: { attempts_left: 2,
                                                                       attempts_total: 15,
                                                                       hints: [2, 3],
+
                                                                       hints_total: 2 },
-                                                     guess_code: []
+                                                     guess_code: [],
+                                                     last_comparison: ''
                                                    }))
     end
 

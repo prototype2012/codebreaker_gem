@@ -3,8 +3,7 @@ module Codebreaker
     include ArrayComparator
     include Validation
 
-    attr_reader :guess_code,
-                :attempts_left
+    attr_reader :guess_code, :attempts_left, :hints_shown, :difficulty, :player_name, :secret_code, :last_comparison
 
     def initialize(difficulty:, player_name:, secret_code:, **rest_params)
       validate_name(player_name)
@@ -19,6 +18,7 @@ module Codebreaker
       @hints = init_hints(attempts_info[:hints])
       @guess_code = rest_params[:guess_code] || []
       @hints_shown = rest_params[:hints_shown] || []
+      @last_comparison = rest_params[:last_comparison] || ''
     end
 
     def win?
@@ -59,6 +59,7 @@ module Codebreaker
       {
         secret_code: @secret_code,
         guess_code: @guess_code,
+        last_comparison: @last_comparison,
         difficulty: @difficulty,
         player_name: @player_name,
         attempts_info: {
