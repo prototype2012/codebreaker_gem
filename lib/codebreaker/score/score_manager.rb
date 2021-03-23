@@ -5,6 +5,7 @@ module Codebreaker
 
       def add_score(score_row)
         prepared_row = prepare_row(score_row)
+
         FileUtils.write(Constants::SCORE_FILE_PATH, score.push(prepared_row))
       end
 
@@ -38,7 +39,8 @@ module Codebreaker
           attempts_total: attempts_info[:attempts_total],
           attempts_used: attempts_info[:attempts_total] - attempts_info[:attempts_left],
           hints_total: attempts_info[:hints_total],
-          hints_used: attempts_info[:hints_total] - attempts_info[:hints].length
+          hints_used: attempts_info[:hints_total] - attempts_info[:hints].length,
+          time: Time.new
         }
       end
 
