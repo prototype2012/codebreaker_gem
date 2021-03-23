@@ -4,6 +4,7 @@ require 'codebreaker'
 require_relative './constants'
 
 require 'terminal-table'
+require_relative './utils/file_utils'
 require_relative './score/game_result'
 require_relative './score/score_manager'
 
