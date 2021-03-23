@@ -11,7 +11,7 @@ module FileUtils
     end
 
     def read(path)
-      YAML.safe_load(File.read(path), [Symbol])
+      YAML.safe_load(File.read(path), [Symbol, Time])
     end
   end
 end
